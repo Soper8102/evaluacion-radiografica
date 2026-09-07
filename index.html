@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evaluación Radiológica</title>
+    <title>Evaluación - Proyecto Hidrogel Murino</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -215,13 +215,13 @@
         <!-- PASO 1: Radiografía -->
         <div id="step-1" class="card">
             <span class="header-tag">Paso 1 de 2 • Observación</span>
-            <h1>Análisis Radiológico</h1>
-            <p class="subtitle">Examina con atención la imagen antes de pasar al cuestionario evaluativo.</p>
+            <h1>Análisis de la Placa</h1>
+            <p class="subtitle">Examina la radiografía antes de pasar al cuestionario sobre el proyecto.</p>
 
             <div class="xray-viewer">
-                <!-- Reemplaza el src con la ruta o URL directa de tu radiografía -->
-                <img id="xray-img" src="img/imagen_rata.jpg" alt="Radiografía" />
-                <div class="caption">Estudio radiográfico murino de referencia.</div>
+                <!-- ¡IMPORTANTE! Asegúrate de que el nombre del archivo coincida -->
+                <img id="xray-img" src="img/imagen_rata.jpg" alt="Radiografía de rata" />
+                <div class="caption">Estudio radiográfico murino. Proyecto de regeneración ósea.</div>
             </div>
 
             <button class="btn btn-primary" onclick="goToStep(2)">Continuar a la evaluación →</button>
@@ -236,53 +236,63 @@
 
             <div>
                 <span class="header-tag">Paso 2 de 2 • Cuestionario</span>
-                <h1>Evaluación</h1>
-                <p class="subtitle">Responde las 4 preguntas con base en la placa analizada.</p>
+                <h1>Evaluación del Proyecto</h1>
+                <p class="subtitle">Responde las 5 preguntas basándote en el proyecto y la placa analizada.</p>
             </div>
 
             <form id="quiz-form" onsubmit="submitQuiz(event)">
                 <!-- Pregunta 1 -->
                 <div class="question-block">
-                    <div class="question-title">1. ¿Qué proyección radiológica se observa principalmente en la imagen?
-                    </div>
-                    <label class="option-label"><input type="radio" name="q1" value="A" required> A) Ventrodorsal
-                        (VD)</label>
-                    <label class="option-label"><input type="radio" name="q1" value="B"> B) Lateral derecha</label>
-                    <label class="option-label"><input type="radio" name="q1" value="C"> C) Dorsoventral (DV)</label>
+                    <div class="question-title">1. ¿Según la radiografía, cómo podemos usar el hidrogel?</div>
+                    <label class="option-label"><input type="radio" name="q1" value="A" required> A) Exclusivamente para
+                        fracturas menores en extremidades.</label>
+                    <label class="option-label"><input type="radio" name="q1" value="B"> B) Podemos usar el hidrogel
+                        para lesiones graves.</label>
+                    <label class="option-label"><input type="radio" name="q1" value="C"> C) Como suplemento vitamínico
+                        para acelerar la cicatrización cutánea.</label>
                 </div>
 
                 <!-- Pregunta 2 -->
                 <div class="question-block">
-                    <div class="question-title">2. En la cavidad torácica, ¿cómo se aprecia la silueta cardíaca y los
-                        campos pulmonares?</div>
-                    <label class="option-label"><input type="radio" name="q2" value="A" required> A) Patrón alveolar
-                        bilateral difuso</label>
-                    <label class="option-label"><input type="radio" name="q2" value="B"> B) Radiopacidad y contorno
-                        dentro de parámetros anatómicos normales</label>
-                    <label class="option-label"><input type="radio" name="q2" value="C"> C) Neotórax con desplazamiento
-                        diafragmático</label>
+                    <div class="question-title">2. ¿Quién lideró el proyecto?</div>
+                    <label class="option-label"><input type="radio" name="q2" value="A" required> A) El Doctor John
+                        Smith del MIT.</label>
+                    <label class="option-label"><input type="radio" name="q2" value="B"> B) Un equipo multidisciplinario
+                        sin un líder definido.</label>
+                    <label class="option-label"><input type="radio" name="q2" value="C"> C) La Doctora Lihi
+                        Adler.</label>
                 </div>
 
                 <!-- Pregunta 3 -->
                 <div class="question-block">
-                    <div class="question-title">3. En la región digestiva/abdominal, ¿cuál es el hallazgo visible?</div>
-                    <label class="option-label"><input type="radio" name="q3" value="A" required> A) Presencia
-                        fisiológica habitual de gas en ciego y estómago</label>
-                    <label class="option-label"><input type="radio" name="q3" value="B"> B) Evidencia clara de cuerpo
-                        extraño metálico radiopaco</label>
-                    <label class="option-label"><input type="radio" name="q3" value="C"> C) Pérdida total del detalle
-                        seroso por líquido libre masivo</label>
+                    <div class="question-title">3. ¿Cómo se probó el hidrogel?</div>
+                    <label class="option-label"><input type="radio" name="q3" value="A" required> A) Mediante
+                        simulaciones computarizadas de tejido óseo.</label>
+                    <label class="option-label"><input type="radio" name="q3" value="B"> B) Directamente en pacientes
+                        humanos con osteoporosis.</label>
+                    <label class="option-label"><input type="radio" name="q3" value="C"> C) En el cráneo de una
+                        rata.</label>
                 </div>
 
                 <!-- Pregunta 4 -->
                 <div class="question-block">
-                    <div class="question-title">4. Respecto a la estructura ósea (columna, costillas y pelvis):</div>
-                    <label class="option-label"><input type="radio" name="q4" value="A" required> A) Se observa fractura
-                        completa en fémur derecho</label>
-                    <label class="option-label"><input type="radio" name="q4" value="B"> B) Disrupción articular en
-                        columna lumbosacra</label>
-                    <label class="option-label"><input type="radio" name="q4" value="C"> C) Integridad ósea conservada
-                        sin soluciones de continuidad</label>
+                    <div class="question-title">4. ¿Cómo es el proceso de regeneración?</div>
+                    <label class="option-label"><input type="radio" name="q4" value="A" required> A) Inflamación y
+                        coágulo de fibrina, formación de callo blando, osteoblastos depositan hueso inmaduro y por
+                        último los tejidos se reordenan.</label>
+                    <label class="option-label"><input type="radio" name="q4" value="B"> B) El hidrogel se endurece
+                        instantáneamente, reemplazando el hueso perdido sin intervención celular.</label>
+                    <label class="option-label"><input type="radio" name="q4" value="C"> C) Fusión ósea directa,
+                        crecimiento epidérmico y reabsorción pasiva del material de hidrogel.</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-block">
+                    <div class="question-title">5. ¿Cómo se llaman las raticas?</div>
+                    <label class="option-label"><input type="radio" name="q5" value="A" required> A) Pinky y
+                        Cerebro.</label>
+                    <label class="option-label"><input type="radio" name="q5" value="B"> B) Bernardo y Bianca.</label>
+                    <label class="option-label"><input type="radio" name="q5" value="C"> C) Tom y Jerry.</label>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Finalizar y Calificar</button>
@@ -292,22 +302,24 @@
         <!-- PASO 3: Resultados -->
         <div id="step-3" class="card hidden">
             <div class="result-box">
-                <div class="score-circle" id="score-display">0/4</div>
+                <div class="score-circle" id="score-display">0/5</div>
                 <h2 id="result-title">Evaluación completada</h2>
                 <p class="subtitle" id="result-text">Tus respuestas han sido procesadas correctamente.</p>
                 <button class="btn btn-primary" onclick="location.reload()"
-                    style="max-width: 250px; margin: 1rem auto 0;">Reiniciar</button>
+                    style="max-width: 250px; margin: 1rem auto 0;">Reiniciar Cuestionario</button>
             </div>
         </div>
 
     </div>
 
     <script>
+        // Clave de respuestas correctas actualizada
         const answers = {
-            q1: "A",
-            q2: "B",
-            q3: "A",
-            q4: "C"
+            q1: "B",
+            q2: "C",
+            q3: "C",
+            q4: "A",
+            q5: "B"
         };
 
         function goToStep(step) {
@@ -323,6 +335,7 @@
             event.preventDefault();
 
             let score = 0;
+            const totalQuestions = 5;
             const formData = new FormData(event.target);
 
             for (const [key, correctValue] of Object.entries(answers)) {
@@ -331,20 +344,22 @@
                 }
             }
 
-            document.getElementById("score-display").textContent = `${score}/4`;
+            // Actualizar visualización del puntaje (ej: 4/5)
+            document.getElementById("score-display").textContent = `${score}/${totalQuestions}`;
 
             const resultTitle = document.getElementById("result-title");
             const resultText = document.getElementById("result-text");
 
-            if (score === 4) {
-                resultTitle.textContent = "¡Excelente diagnóstico!";
-                resultText.textContent = "Has acertado todas las preguntas de la evaluación.";
-            } else if (score >= 2) {
-                resultTitle.textContent = "Buen intento";
-                resultText.textContent = "Revisa de nuevo las estructuras anatómicas para afinar la observación.";
+            // Mensajes personalizados según el puntaje
+            if (score === totalQuestions) {
+                resultTitle.textContent = "¡Conocimiento Perfecto!";
+                resultText.textContent = "Has demostrado un dominio total sobre los detalles del proyecto y la regeneración ósea.";
+            } else if (score >= 3) {
+                resultTitle.textContent = "Buen trabajo";
+                resultText.textContent = "Tienes claros los conceptos principales, pero repasa los detalles específicos del estudio.";
             } else {
                 resultTitle.textContent = "Repaso recomendado";
-                resultText.textContent = "Es conveniente analizar la placa nuevamente y reforzar los conceptos.";
+                resultText.textContent = "Es conveniente revisar la información del proyecto y analizar la placa nuevamente.";
             }
 
             goToStep(3);
